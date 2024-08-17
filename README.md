@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# VideoStore Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+VideoStore is a web application where you can manage your favorite videos. This repository contains the front-end code for VideoStore, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The front-end application allows users to:
 
-## Expanding the ESLint configuration
+- View a list of videos.
+- Add new videos.
+- Edit existing videos.
+- Delete videos from their list.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static types.
+- **Vite**: Build tool for fast development and optimized production builds.
+- **React Router DOM**: For handling routing within the application.
+- **React Toastify**: For toast notifications.
+- **React Player**: For embedding video players.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Javierdigital85/front-favouritesVideos
+   cd front-favouritesVideos
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Start the application:**
+   ```bash
+   npm run dev
+   ```
+
+## Usage
+
+Once the application is up and running, you can interact with it through the following features:
+
+- **View Videos:**
+  - Navigate to the main page to see a list of all your saved videos, including their titles, descriptions, and embedded video players.
+
+- **Add a New Video:**
+  - Go to the `/new-video` page to add a new video.
+  - Fill in the form with the video's title, URL, and description.
+  - Click "Create Video" to save the new video to your list.
+
+- **Edit an Existing Video:**
+  - On the main page, click on a video's title to open the edit form.
+  - Modify the video's title, URL, or description as needed.
+  - Click "Update Video" to apply the changes.
+
+- **Delete a Video:**
+  - On the main page, click the delete icon (an "x") next to the video you want to remove.
+
+## API Endpoints
+
+- **GET /api/videos**: Retrieve the list of videos.
+- **POST /api/videos**: Create a new video.
+- **GET /api/videos/:id**: Retrieve a specific video by ID.
+- **PUT /api/videos/:id**: Update an existing video by ID.
+- **DELETE /api/videos/:id**: Delete a video by ID.
+
+## Contact
+
+For any inquiries or support, please contact:
+
+- **Name:** Javier
+- **Email:** javiercolodro@gmail.com
