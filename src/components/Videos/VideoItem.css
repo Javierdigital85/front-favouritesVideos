@@ -1,0 +1,12 @@
+.video-card {
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+.video-card:hover {
+  border: 1px solid #333;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.delete:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+}
